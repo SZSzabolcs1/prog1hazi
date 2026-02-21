@@ -3,13 +3,13 @@
 
 int main()
 {
-    int sugar;
-    printf("add meg akor sugarat");
-    scanf("%d", &sugar);
+    float sugar;
+    printf("add meg akor sugarat: ");
+    scanf("%f", &sugar);
 
 
-    printf("A kor kerulete: %d cm\n", 2*sugar* M_PI);
-    printf("A kor terulete: %d cm\n", sugar*sugar* M_PI);
+    printf("A kor kerulete: %0.2f cm\n", 2*sugar* M_PI);
+    printf("A kor terulete: %0.2f cm\n", sugar*sugar* M_PI);
 
 
     return 0;
