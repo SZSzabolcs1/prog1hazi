@@ -7,7 +7,7 @@ int main()
     {
         printf("Pozitiv egesz: ");
         scanf("%d",&szam);
-    } while (szam >=0);
+    } while (szam ==0);
     
     return 0;
 }
