@@ -1,0 +1,7 @@
+könnyen olvasható: több sorban legyen a forráskód
+printnél a fajl nevet irja ki
+-h help
+-v version
+java?
+--stdout > dont create file, print result to stdout
+ez mar letezik
