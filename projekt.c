@@ -5,7 +5,7 @@
 #define VERSION "1.1"
 void print_help(char *program_name) {
     printf("Hasznalat: %s [opcio|nyelv]\n\n", program_name);
-    printf("Opciók:\n");
+    printf("Opciok:\n");
     printf("  -h, --help      Help megjelenitese\n");
     printf("  -v, --version   Verzioszam\n");
     printf("  --stdout        Fajl helyett stdout-ra ir\n\n");
@@ -25,6 +25,13 @@ void print_version() {
 void output_code(const char *filename, const char *code, int stdout_mode) {
     if (stdout_mode) {
         printf("%s", code);
+        return;
+    }
+
+    FILE *check = fopen(filename, "r");
+    if (check != NULL) {
+        fclose(check);
+        printf("A fajl mar letezik: %s\n", filename);
         return;
     }
 
@@ -127,7 +134,7 @@ int main(int argc, char *argv[]) {
     }
     else {
         printf("Nem tamogatott nyelv!\n");
-        return 2;
+        return 1;
     }
 
     return 0;
